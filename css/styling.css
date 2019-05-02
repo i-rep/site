@@ -1216,8 +1216,8 @@ footer a{
 	}
 	
 	#org_intro iframe{
-		width: 427px;
-		height: 240px;
+		width: 100%;
+		height: auto;
 	}
 
 	#i_am_responsible{
