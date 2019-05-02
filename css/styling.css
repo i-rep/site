@@ -1214,6 +1214,11 @@ footer a{
 	.top_bar img{
 		width: 80px;
 	}
+	
+	#org_intro iframe{
+		width: 427px;
+		height: 240px;
+	}
 
 	#i_am_responsible{
 		flex-direction: column;
