@@ -20,7 +20,6 @@ body{
 
 /*GLOBAL*/
 .placeholder{	
-	display: inline-block;
 	width: 90%;
 	margin: auto;
 }
@@ -141,10 +140,10 @@ header #act_now button:hover{
 * { outline: none; }
 
 main {
-
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 
 main > div {
@@ -196,7 +195,7 @@ main small {
   display: block;
   width: 100%;
   height: 3px;
-  background: #089CFE;
+  background: #800080;
   transition: .3s;
 }
 
@@ -225,6 +224,7 @@ main small {
   pointer-events: none;
   overflow: scroll;
 }
+
 
 #nav-container .bg {
   position: absolute;
@@ -268,7 +268,7 @@ main small {
   top: 0;
   left: 0;
   height: calc(100% - 70px);
-  background: #ececec;
+  background: #800080;
   pointer-events: auto;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   transform: translateX(-100%);
@@ -287,14 +287,21 @@ main small {
 #nav-content li a {
   padding: 10px 5px;
   display: block;
-  text-transform: uppercase;
   transition: color .1s;
   text-decoration: none;
 }
 
 #nav-content .indented li{
 	margin-left: 20px;
+	font-size: 0.7rem;
 }
+
+
+#nav-content  .big a{
+	color: white;
+	font-size: 1.2rem;
+}
+
 
 #nav-content li a:hover { color: #BF7497; }
 
@@ -309,7 +316,7 @@ main small {
 .small a {
   font-size: 12px;
   font-weight: 400;
-  color: #888;
+  color: white;
 }
 
 .small a + a { margin-left: 15px; }
@@ -368,6 +375,20 @@ main small {
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -448,14 +469,13 @@ main small {
 
 /*ORG INTRO*/
 #org_intro{	
-	position: relative;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	text-align: center;
 	background: #ffff;
-	padding: 80px 5px 50px 5px;
+	padding: 80px 5px 10px 5px;
 }
 
 #org_intro .quote{
@@ -512,13 +532,86 @@ main small {
 
 
 
+
+
+
+
+/* video_launch */
+#video_launch{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	min-height: 400px;
+	z-index: -1;
+}
+
+#video_launch .vid{
+	width: 60%;
+	z-index: -2;
+}
+
+#video_launch .info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	position: relative;
+	background: #F2F1F1;
+	box-sizing: border-box;
+	height: 400px;
+	width: 40%;
+}
+
+#video_launch .info:after{
+	position: absolute;
+	z-index: -1;
+	width: 50px;
+	height: 50px;
+	top: 40%;
+	left: -4%;
+	content: "";
+	background: #F2F1F1;
+	-webkit-transform: rotate(45deg); /* Safari and Chrome */
+    -moz-transform: rotate(45deg);   /* Firefox */
+    -ms-transform: rotate(45deg);   /* IE 9 */
+    -o-transform: rotate(45deg);   /* Opera */
+    transform: rotate(45deg);
+}
+
+#video_launch .info h3{
+	font-size: 5rem;
+	font-family: Gotham-Thin;
+	font-weight: normal;
+	color: #800080;
+	text-align: center;
+}
+
+#video_launch .info h4{
+	font-size: 1.5rem;
+	font-family: Gotham-Thin;
+	font-weight: normal;
+	text-align: center;
+	line-height: 0.8;
+	padding-bottom: 15px;
+}
+
+#video_launch .info h5{
+	font-size: 2rem;
+	display: none;
+}
+
+
+
+
+
 /*FEATURED STORIES*/
 #featured_stories{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
-	background: #089CFE;
+	background: #800080;
 	padding: 50px;
 	color: white;
 	text-align: center;
@@ -528,6 +621,7 @@ main small {
 
 #featured_stories p{
 	font-style: italic;
+	font-size: 0.8rem;
 }
 
 
@@ -538,34 +632,53 @@ main small {
 }
 
 #featured_stories .story_boxes h6{
-	font-size: 1rem;
+	font-family: Gotham-Thin;
+	font-size: 2rem;
 	font-weight: normal;
+	padding-top: 10px;
+}
+
+#featured_stories .story_boxes a{
+	text-decoration: none;
+	color: #FE08BD;
 }
 
 #featured_stories .story_1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 45%;
 	border-bottom: 20px;
 	padding: 10px 15px 10px 15px;
 }
 
-#featured_stories .story_1 img{
+
+#featured_stories .girl_1{
+	background: url('../pictures/misc/girl_1.jpg') no-repeat;
+	background-size: cover;
 	border-radius: 50%;
 	width: 17rem;
-	height: 17rem;
+	height: 17rem;	
 }
 
 #featured_stories .story_2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 45%;
 	border-bottom: 20px;
 	padding: 10px 15px 10px 15px;
 }
 
-#featured_stories .story_2 img{
+#featured_stories .girl_2{
+	background: url('../pictures/misc/girl_2.jpg') no-repeat;
+	background-size: cover;
 	border-radius: 50%;
 	width: 17rem;
-	height: 17rem;
+	height: 17rem;	
 }
-
 
 
 /*WHAT WE DO*/
@@ -590,6 +703,7 @@ main small {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 }
 
 #what_we_do .areas_of_work_boxes p{
@@ -612,13 +726,26 @@ main small {
 	padding: 10px 2vw 10px 2vw; 
 }
 
+#what_we_do .why_we_do h3{
+	font-size: 30px; 
+	font-weight: normal; 
+	padding-top: 80px;
+}
+
+
+
+
+
+
+
+
 
 
 
 /*FXED PIC*/
 
 #fixed_pic{
-	background-image: url("../pictures/homepage_imgs/home_pic.jpg");
+	background-image: url("../pictures/homepage_imgs/home_pic4.jpg");
 	background-attachment: fixed;
 	height: 60vh;
 	background-position: center;
@@ -644,9 +771,13 @@ main small {
 }
 
 #i_am_responsible .i_am_responsible_info{
-	flex-basis: 50%;
+	flex-basis: 70%;
 	order: 2;
 	padding: 0px 0px 0px 20px;
+}
+
+#i_am_responsible .i_am_responsible_info p{
+	text-align: justify;
 }
 
 #i_am_responsible .i_am_responsible_pic{
@@ -660,23 +791,66 @@ main small {
 }
 
 /*TEAM*/
-#team{	
+#team{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;	
 	text-align: center;
 	background: white;
-	padding-top: 80px;
-	padding-bottom: 30px;
 	margin: auto;
 	width: 100%;
+	
+}
 
+#team .team_leadership{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
 }
 
 #team .the_team{
-	float: left;
-	width: 33%;
+	flex-basis: 15rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#team .the_team h4{
+	padding-top: 10px;
+}
+
+#team .the_team .chairperson{
+	background: url(../pictures/homepage_imgs/moses.jpg) no-repeat;
+	background-size: cover;
+	width: 10rem;
+	height: 10rem;
+	box-shadow: 3px 5px 3px 0 rgba(1,1,1,0.2);
+	border-radius: 50%;	
 }
 
 
-.btn_blue{
+#team .the_team .secretary{
+	background: url(../pictures/homepage_imgs/domtila.jpg) no-repeat;
+	background-size: cover;
+	width: 10rem;
+	height: 10rem;
+	box-shadow: 3px 5px 3px 0 rgba(1,1,1,0.2);
+	border-radius: 50%;	
+}
+
+#team .the_team .treasurer{
+	background: url(../pictures/story.jpg) no-repeat;
+	background-size: cover;
+	width: 10rem;
+	height: 10rem;
+	box-shadow: 3px 5px 3px 0 rgba(1,1,1,0.2);
+	border-radius: 50%;	
+}
+
+.btn_team{
 	background: none;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -684,11 +858,12 @@ main small {
 	height: 50px;
 	font-size: 20px;
 	font-family: Gotham-Thin;
-	margin-top: 20px;
+	margin-bottom: 50px;
+
 }
 
-.btn_blue:hover{
-	background: #089CFE;
+.btn_team:hover{
+	background: black;
 	color: white;
 	border: none;
 	cursor: pointer;
@@ -759,44 +934,48 @@ main small {
 
 #connect .social_connect_boxes a{
 	text-decoration: none;
+	color: currentColor;
 }
 
 #connect .social_connect_facebook{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin: auto;
 	border-radius: 50%;
 	width: 10rem;
 	height: 10rem;
 	background: #EFEEEE;
- 	margin: 20px;
-
  	color:#3b5998;
 }
 
 #connect .social_connect_twitter{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin: auto;
 	border-radius: 50%;
 	width: 10rem;
 	height: 10rem;
 	background: #EFEEEE;
- 	margin: 20px;
  	color:#1da1f2;
+ 	margin: 0 20px 0 20px;
 }
 
-#connect .social_connect_youtube{
+#connect .social_connect_instagram{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin: auto;
 	border-radius: 50%;
 	width: 10rem;
 	height: 10rem;
 	background: #EFEEEE;
- 	margin: 20px;
  	color:#ff0000;
 }
 
 #connect .social_connect{
-	font-size:40px;	
+	font-size:40px;
 }
 
 #connect .social_connect:hover{
@@ -805,10 +984,6 @@ main small {
 
 }
 
-#connect .social_connect_boxes i{
-	text-align: center;
-	margin: auto;
-}
 
 #connect h6{
 	font-size: 3rem;
@@ -842,8 +1017,7 @@ main small {
 #about_homepage{
 	display: flex;
 	justify-content: center;	
-	background: #089CFE;
-	height: 30vh;
+	height: 10vh;
 	padding: 20px;
 	color: white;
 }
@@ -995,14 +1169,14 @@ main small {
 
 #team_about .team_about_members .team_Chairperson{
 	padding: 10px;
-	flex-basis: 30%;
+	flex-basis: 45%;
 	background: rgba(1, 0, 0, 0.5);
 	border-radius: 20px 20px 0px 0px;
 }
 
 #team_about .team_about_members .team_Secretary{
 	padding: 10px;
-	flex-basis: 30%;
+	flex-basis: 45%;
 	background: rgba(1, 0, 0, 0.5);
 	border-radius: 20px 20px 0px 0px;
 }
@@ -1019,6 +1193,203 @@ main small {
 
 
 
+
+
+
+/* PRIVACY POLICY */
+#p_policy{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 500px;
+	padding: 20px;
+	background: white;
+	margin: 20px;
+	text-align: justify;
+}
+
+#p_policy h2{
+	font-family: Gotham-Thin;
+	font-size: 4rem;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+#p_policy li{
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* terms_and_conditions */
+#terms_and_conditions{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 500px;
+	padding: 20px;
+	background: white;
+	margin: 20px;
+	text-align: justify;
+}
+
+#terms_and_conditions h2{
+	font-family: Gotham-Thin;
+	font-size: 4rem;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+
+#terms_and_conditions h3{
+	font-family: Gotham-Thin;
+	font-size: 2rem;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact_page */
+
+#contact_page{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0 80px 0;
+	height: auto;
+}
+#contact_page a{
+	text-decoration: none;
+	color: black;
+} 
+
+#contact_page h4{
+	padding-bottom: 10px;
+}
+
+#contact_page p{
+	font-size: 0.8rem;
+}
+
+#contact_page h2{
+	font-family: Gotham-Thin;
+	font-size: 4rem;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+#contact_page .contact_boxes{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	margin: auto;
+	padding: 10px 30px 10px 30px;
+}
+
+
+#contact_page .contact_boxes .contact_box{
+	background: #F6F5F5;
+	min-height: 20vh;
+	width: 30%;
+	padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* featured_story */
+
+#featured_story{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	padding: 20px;
+	width: 75%;
+}
+
+#featured_story .story .image_story1{
+	background: url('../pictures/misc/girl_1.jpg') no-repeat;
+	background-size: cover;
+	height: 300px;
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+}
+
+#featured_story .story .image_story2{
+	background: url('../pictures/misc/girl_2.jpg') no-repeat;
+	background-size: cover;
+	height: 300px;
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+}
+
+#featured_story .story .float_right{
+	float: right;
+}
+
+#featured_story h2{
+	font-family: Gotham-Thin;
+	font-size: 3rem;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+#featured_story p{
+	text-align: justify;
+	font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*FOOTER*/
 footer{
 	display: flex;
@@ -1026,7 +1397,7 @@ footer{
 	justify-content: center;
 	flex-wrap: wrap;
 	color: white;
-	background: #089CFE;
+	background: #800080;
 	padding: 20px 20px 20px 20px;
 	min-height: 40vh;
 	line-height: 1.2;	
@@ -1153,6 +1524,42 @@ footer a{
 		margin-bottom: 10px;
 	}
 
+	#video_launch .vid{
+		width: 100%;
+		min-height: 50vw;
+		order: 2;
+	}
+
+	.vid iframe{
+		width: 100%;		
+	}
+
+	#video_launch .info{
+		width: 100%;
+		order: 1;
+		height: 70vw;
+	}
+
+	#video_launch .info:after{
+		display: none;
+	}
+
+	#video_launch .info h5{
+		display: block;
+	}
+
+	#video_launch .info h3{
+		font-size: 15vw;		
+	}
+
+	#video_launch .info h4{
+		font-size: 5vw;
+	}
+
+	#video_launch .info p{
+		display: none;
+	}
+
 	#featured_stories .story_boxes{
 		flex-direction: column;
 		align-items: center;
@@ -1177,6 +1584,18 @@ footer a{
 	#featured_stories .story_2 img{
 		width: 10rem;
 		height: 10rem;
+	}
+
+	#what_we_do .why_we_do h3{
+		padding-top: 0px;
+	}
+
+	#team .the_team{
+		flex-basis: 20rem;
+	}
+
+	#team .the_team p{
+		padding-bottom: 30px;
 	}
 
 	#partners .the_patners{
@@ -1213,11 +1632,6 @@ footer a{
 
 	.top_bar img{
 		width: 80px;
-	}
-	
-	#org_intro iframe{
-		width: 100%;
-		height: auto;
 	}
 
 	#i_am_responsible{
@@ -1289,6 +1703,15 @@ footer a{
 
 		#partners h3{
 		font-size: .8rem;
+	}
+
+	#contact_page .contact_boxes{
+		height: 78vh;
+	}
+
+	#contact_page .contact_boxes .contact_box{
+		width:100%;
+		padding: 10px;
 	}
 
 	footer .footer_menu{
