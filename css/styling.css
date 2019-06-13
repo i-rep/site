@@ -8,6 +8,18 @@
   src: url(../fonts/Gotham-Thin.ttf);
 }
 
+@font-face {
+  font-family: Gotham-Ultra;
+  src: url(../fonts/Gotham-Ultra.ttf);
+}
+
+@font-face {
+  font-family: Gotham-Book;
+  src: url(../fonts/Gotham-Book.ttf);
+}
+
+
+
 body{
 	font-family: Arial, Helventica, sans-serif;
 	line-height: 1.5;
@@ -542,10 +554,12 @@ main small {
 	flex-wrap: wrap;
 	position: relative;
 	min-height: 400px;
+	z-index: -1;
 }
 
 #video_launch .vid{
 	width: 60%;
+	z-index: -2;
 }
 
 #video_launch .info{
@@ -563,6 +577,7 @@ main small {
 
 #video_launch .info:after{
 	position: absolute;
+	z-index: -1;
 	width: 50px;
 	height: 50px;
 	top: 40%;
@@ -1376,6 +1391,253 @@ main small {
 
 
 
+/* join */
+#join{
+	min-height: 80vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#join h2{
+	font-family: Gotham-Thin;
+	font-size: 2rem;
+	padding-top: 80px;
+	font-weight: normal;
+	text-align: center;
+	padding: 0 20px 0 20px;
+}
+
+#join .join_options{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 60%;
+	min-height: 100px;
+	/* background: grey; */
+	padding: 30px;
+	color: white;
+}
+
+#join .join_options a{
+	text-decoration: none;
+	color: currentColor;
+	flex-basis: 45%;	
+}
+
+#join .join_options .join_volunteer{
+	background: #800080;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px 0 20px;
+} 
+
+#join .join_options .join_volunteer:hover{
+	background: black;
+	font-size: 1.1rem;
+}
+
+#join .join_options .join_donor{
+	background: #FE08BD;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px 0 20px;
+}
+
+#join .join_options .join_donor:hover{
+	background: black;
+	font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+/* volunteer */
+#volunteer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 100%;
+	min-height: 200px;
+	background: url(../pictures/misc/map_world.jpg) no-repeat center top;
+	background-position: fixed;
+}
+
+#volunteer .volunteer_brief{
+	padding: 20px;
+}
+
+#volunteer .form_holder{
+	background: #FE08BD;
+	border-radius: 45px 45px 0 0;
+	width: 75vw;
+}
+
+#volunteer form{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px;
+	color: white;
+}
+
+#volunteer form input[type=text]{
+	width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+	  border: none;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  background: none;
+  color: white;
+  margin-bottom: 50px;
+}
+
+#volunteer form input[type=email]{
+	width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+	  border: none;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  background: none;
+  color: white;
+  margin-bottom: 50px;
+}
+
+
+#volunteer form input[type=number]{
+	width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+	  border: none;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  background: none;
+  color: white;
+  margin-bottom: 50px;
+}
+
+#volunteer form label{
+	padding-right: 15px;
+}
+
+#volunteer form select{
+	background: #FE08BD;
+	border: none;
+	color: white;
+}
+
+#volunteer form input[type=date]{
+	background: #FE08BD;
+	color: white;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+#volunteer textarea{
+	min-height: 100px;
+	width: 100%;
+	padding: 20px;
+	background: rgba(255,255,255,0.5);
+	border: none;
+	color: white;
+	margin-bottom: 30px;
+}
+
+#volunteer button{
+	padding: 10px;
+	width: 150px;
+	border: none;
+	background: white;
+	color: #FE08BD;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* thankyou */
+#thankyou{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+}
+
+#thankyou .logo{
+	background: url('../pictures/logo/i_rep_logo.png') no-repeat;
+	background-size: cover;
+	height: 4rem;
+	width: 9rem;
+}
+
+#thankyou h2{
+	font-weight: normal;
+	font-family: Gotham-Thin;
+	font-size: 3rem;
+	padding: 50px 0 10px 0;
+	color: #FE08BD;
+}
+
+#thankyou .volunteer_info{
+	display: flex;
+	flex-direction: column;
+	font-family: Gotham-Book;
+	font-size: 0.8rem;
+	color: #800080;
+	padding: 20px;
+}
+
+#thankyou button{
+	padding: 10px 15px 10px 15px;
+	font-size: 1rem;
+	border: 1px solid #800080;
+	background: none;
+	color: #800080;
+	border-radius: 100px;
+
+}
+
+
+#thankyou button i{
+	padding-right: 60px;
+}
+
+#thankyou button:hover{
+	border: 1px solid black;
+	font-size: 1rem;
+	color: black;
+}
+
+
+
+
+
+
 
 
 
@@ -1610,6 +1872,20 @@ footer a{
 		background: #EFEEEE;
 		padding: 10px;	
 	 	margin: 10px;
+	}
+
+	#join h2{
+		font-size: 6vw;
+	}
+
+	#join .join_options{
+		width: 100%;
+		flex-direction: column;
+		height: 200px;
+	}
+
+	#join .join_options a{
+		width: 100%;
 	}
 
 	footer .contact{
