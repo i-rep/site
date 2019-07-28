@@ -550,16 +550,16 @@ main small {
 
 /* video_launch */
 #video_launch{
-	display: flex;
+	display: flex; 
 	flex-wrap: wrap;
 	position: relative;
 	min-height: 400px;
-	z-index: -1;
+	z-index: 1;
 }
 
 #video_launch .vid{
 	width: 60%;
-	z-index: -2;
+	z-index: 1;
 }
 
 #video_launch .info{
@@ -1156,6 +1156,8 @@ main small {
 	margin: auto;
 	text-align: center;
 	padding: 40px 20px 0px 20px;
+	width: 100%;
+	min-height: 500px;
 }
 
 #team_about h3{
@@ -1201,6 +1203,99 @@ main small {
 }
 
 
+
+/* team_members */
+#team_members{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+	padding: 50px 0 50px 0;
+	width: 100%;
+	min-height: 30vh;
+
+}
+
+#member1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#member1 h3{
+	font-size: 2rem;
+	font-family: Gotham-Book;
+}
+
+#member1 h4{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+}
+
+#member1 .member1_pic{
+	background: url(../pictures/homepage_imgs/domtila2.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+
+
+#member2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#member2 h3{
+	font-size: 2rem;
+	font-family: Gotham-Book;
+}
+
+#member2 h4{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+}
+
+#member2 .member2_pic{
+	background: url(../pictures/homepage_imgs/moses.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+
+
+#member3{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#member3 h3{
+	font-size: 2rem;
+	font-family: Gotham-Book;
+}
+
+#member3 h4{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+}
+
+#member3 .member3_pic{
+	background: url(../pictures/homepage_imgs/mag.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	margin: 10px;
+}
 
 
 
@@ -1969,12 +2064,39 @@ footer a{
 	#team_about .team_about_members .team_Treasurer{
 		background: none;
 	}
-	
+
+	#member1 .member1_pic{
+		width: 70vw;
+		height: 70vw;
+	}
+
+	#member1 h4{
+		font-size: 1rem;
+	}
+
+	#member2 .member2_pic{
+		width: 70vw;
+		height: 70vw;
+	}
+
+	#member2 h4{
+		font-size: 1rem;
+	}
+
+	#member3 .member3_pic{
+		width: 70vw;
+		height: 70vw;
+	}
+
+	#member3 h4{
+		font-size: 1rem;
+	}
+
 	#connect h6{
 		font-size: 10vw;
 	}
 
-		#partners h3{
+	#partners h3{
 		font-size: .8rem;
 	}
 
