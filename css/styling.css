@@ -1208,7 +1208,8 @@ main small {
 #team_members{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;	
+	justify-content: center;
+	align-items: center;	
 	padding: 50px 0 50px 0;
 	width: 100%;
 	min-height: 30vh;
@@ -1296,6 +1297,71 @@ main small {
 	border-radius: 50%;
 	margin: 10px;
 }
+
+
+
+
+#member4{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#member4 h3{
+	font-size: 2rem;
+	font-family: Gotham-Book;
+}
+
+#member4 h4{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+}
+
+#member4 .member4_pic{
+	background: url(../pictures/homepage_imgs/Gitonga.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+
+
+
+
+
+#member5{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#member5 h3{
+	font-size: 2rem;
+	font-family: Gotham-Book;
+}
+
+#member5 h4{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+}
+
+#member5 .member5_pic{
+	background: url(../pictures/homepage_imgs/member5.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+
+
+
+
 
 
 
@@ -2091,6 +2157,29 @@ footer a{
 	#member3 h4{
 		font-size: 1rem;
 	}
+
+	#member4 .member4_pic{
+		width: 70vw;
+		height: 70vw;
+	}
+
+	#member4 h4{
+		font-size: 1rem;
+	}
+
+	#member5 .member5_pic{
+		width: 70vw;
+		height: 70vw;
+	}
+
+	#member5 h4{
+		font-size: 1rem;
+	}
+
+
+
+
+
 
 	#connect h6{
 		font-size: 10vw;
