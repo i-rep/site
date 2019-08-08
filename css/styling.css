@@ -1363,6 +1363,39 @@ main small {
 
 
 
+#member6{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#member6 h3{
+	font-size: 2rem;
+	font-family: Gotham-Book;
+}
+
+#member6 h4{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+}
+
+#member6 .member6_pic{
+	background: url(../pictures/board_members/Jonathan.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -2176,8 +2209,14 @@ footer a{
 		font-size: 1rem;
 	}
 
+	#member6 .member6_pic{
+		width: 70vw;
+		height: 70vw;
+	}
 
-
+	#member6 h4{
+		font-size: 1rem;
+	}
 
 
 
