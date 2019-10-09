@@ -407,27 +407,99 @@ main small {
 
 /*HOMEPAGE*/
 #homepage{	
-
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	min-height: 100vh;
-	background: url(../pictures/homepage_imgs/home_pic.jpg) no-repeat;
-	/*background-position: center;*/
+	background: url(../pictures/homepage_imgs/home_pic_2.jpg) no-repeat;	
 	background-size: cover;
 	background-position: fixed;
 	color: white;
 	text-align: center;
+
+}
+
+#homepage .homepage_left_content{
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: auto;
+
+}
+
+#homepage .IDG2019{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	width: 40vw;
+	background: white;
+	box-shadow: 0 10px 25px 5px rgba(1,1,1,0.5);
+	padding: 5px;
+	border-radius: 10px 0 0 10px;
+	margin-top: 15vh;
+}
+
+#homepage .IDG2019 .girl_day_pic{
+	height: 120px;
+	width: 120px;
+	background: url('../pictures/misc/girl_day_pic.png') no-repeat;
+	background-size: cover;
+}
+
+#homepage .IDG2019 h1{
+	margin: 10px 10px 0 10px;
+	font-size: 2rem;
+	font-family: Gotham-Book;
+	font-weight: bolder;
+
+}
+
+#homepage .IDG2019 .day_content{
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+
+#homepage .IDG2019 h2{
+	font-family: Gotham-Thin;
+	color: black;
+	font-size: 1rem;
+	font-style: normal;
+}
+
+#homepage .IDG2019 button{
+	background: black;
+	color: white;
+	border: none;
+	padding: 8px;
+	border-radius: 5px;
+	width: 150px;
+	margin: 10px;
+}
+
+#homepage .IDG2019 button:hover{
+	background: #FE08BD;
+	cursor: pointer;
 }
 
 #homepage h1{
 	font-family: Gotham-Black;
-	margin-top: 68vh;
+	margin-top: 55vh;
 	font-size: 2rem;
-	/*color: #FE08BD;*/
+	width: 80%;
+	color: #FE08BD;
+	
 }
 
 #homepage p{
 	font-size: 1rem;
 	font-family: Gotham-Thin;
 	padding-bottom: 20px;
+	width: 75%;
+	color: #20BCFE;
+	padding: 20px;
 }
 
 #homepage img{
@@ -438,10 +510,10 @@ main small {
 .btn_learn_more{
 	height: 50px;
 	background: none;
-	border: 1px solid white;
+	border: 1px solid #FE08BD;
 	padding-left: 30px;
 	padding-right: 30px;
-	color: white;
+	color: #FE08BD;
 	border-radius: 3px;
 	font-size: 2rem;
 	cursor: pointer;
@@ -452,10 +524,12 @@ main small {
 	background: #FE08BD;
 	font-weight: bold;
 	border:none;
+	color: white;
 }
 
 
-.scroll-indicator {	
+.scroll-indicator {
+	display: none;	
 	position: absolute;
 	padding-top: 75vh;
 	left: 48%;
@@ -487,7 +561,7 @@ main small {
 	justify-content: center;
 	text-align: center;
 	background: #ffff;
-	padding: 80px 5px 10px 5px;
+	/* padding: 80px 5px 10px 5px; */
 }
 
 #org_intro .quote{
@@ -1925,6 +1999,33 @@ footer a{
 
 
 @media only screen and (max-width: 768px){
+
+	#homepage{
+		flex-direction: column;
+		background-size: 100%;
+		margin-top: 10vh;
+	}
+
+	#homepage h1{
+		margin: 30vh 0 10px 0;
+
+	}
+
+	.btn_learn_more{
+		margin-bottom: 20px;
+	}
+
+	#homepage .IDG2019{
+		width: 80vw;
+		border-radius: 10px;
+		margin: 20px;
+		box-shadow: 0 0px 25px 2px rgba(1,1,1,0.2);
+	}
+
+	#homepage .IDG2019 .day_content{
+		flex-direction: column;
+	}
+
 	#org_intro .box{
 		width: 100%;
 	}
