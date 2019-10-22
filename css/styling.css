@@ -429,7 +429,7 @@ main small {
 }
 
 #homepage .IDG2019{
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	margin: auto;
