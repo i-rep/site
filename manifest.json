@@ -2,7 +2,7 @@
   "name": "I_Rep Foundation",
   "short_name": "I_Rep",
   "description": "Empowering women and girls to fully enjoy their human rights",
-  "start_url": "/",
+  "start_url": "/index.html",
   "background_color": "#FE08BD",
   "theme_color": "#FE08BD",
   "display" : "standalone",
