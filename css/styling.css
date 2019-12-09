@@ -408,10 +408,8 @@ main small {
 /*HOMEPAGE*/
 #homepage{	
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	min-height: 100vh;
-	background: url(../pictures/homepage_imgs/home_pic_2.jpg) no-repeat;	
+	background: url(../pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE.webp) no-repeat;	
 	background-size: cover;
 	background-position: fixed;
 	color: white;
@@ -422,71 +420,24 @@ main small {
 #homepage .homepage_left_content{
 
 	display: flex;
+	
 	align-items: center;
 	flex-direction: column;
-	margin: auto;
-
-}
-
-#homepage .IDG2019{
-	display: none;
-	flex-direction: column;
-	align-items: center;
 	margin: auto;
 	width: 40vw;
-	background: white;
-	box-shadow: 0 10px 25px 5px rgba(1,1,1,0.5);
-	padding: 5px;
-	border-radius: 10px 0 0 10px;
-	margin-top: 15vh;
-}
-
-#homepage .IDG2019 .girl_day_pic{
-	height: 120px;
-	width: 120px;
-	background: url('../pictures/misc/girl_day_pic.png') no-repeat;
-	background-size: cover;
-}
-
-#homepage .IDG2019 h1{
-	margin: 10px 10px 0 10px;
-	font-size: 2rem;
-	font-family: Gotham-Book;
-	font-weight: bolder;
 
 }
 
-#homepage .IDG2019 .day_content{
+#homepage .homepage_right_content{
 	display: flex;
-	align-items: center;
-	margin: auto;
-}
-
-#homepage .IDG2019 h2{
-	font-family: Gotham-Thin;
-	color: black;
-	font-size: 1rem;
-	font-style: normal;
-}
-
-#homepage .IDG2019 button{
-	background: black;
-	color: white;
-	border: none;
-	padding: 8px;
-	border-radius: 5px;
-	width: 150px;
-	margin: 10px;
-}
-
-#homepage .IDG2019 button:hover{
-	background: #FE08BD;
-	cursor: pointer;
+	
+	width: 60vw;
+	height: 200px;
 }
 
 #homepage h1{
 	font-family: Gotham-Black;
-	margin-top: 55vh;
+	margin-top: 10vh;
 	font-size: 2rem;
 	width: 80%;
 	color: #FE08BD;
@@ -586,7 +537,7 @@ main small {
 
 
 #org_intro .box .box_mission{	
-	background: url(../pictures/misc/mission.jpg) no-repeat;
+	background: url(../pictures/misc/mission.webp) no-repeat;
 	background-size: cover;
 	flex-basis: 33%;
 	text-align: center;
@@ -594,7 +545,7 @@ main small {
 }
 
 #org_intro .box .box_vision{
-	background: url(../pictures/misc/vision.jpg) no-repeat;
+	background: url(../pictures/misc/vision.webp) no-repeat;
 	background-size: cover;
 	flex-basis: 33%;
 	text-align: center;
@@ -602,7 +553,7 @@ main small {
 }
 
 #org_intro .box .box_goals{
-	background: url(../pictures/misc/goals.jpg) no-repeat;
+	background: url(../pictures/misc/goals.webp) no-repeat;
 	background-size: cover;
 	flex-basis: 33%;
 	text-align: center;
@@ -741,7 +692,7 @@ main small {
 
 
 #featured_stories .girl_1{
-	background: url('../pictures/misc/girl_1.jpg') no-repeat;
+	background: url('../pictures/misc/girl_1.webp') no-repeat;
 	background-size: cover;
 	border-radius: 50%;
 	width: 17rem;
@@ -759,7 +710,7 @@ main small {
 }
 
 #featured_stories .girl_2{
-	background: url('../pictures/misc/girl_2.jpg') no-repeat;
+	background: url('../pictures/misc/girl_2.webp') no-repeat;
 	background-size: cover;
 	border-radius: 50%;
 	width: 17rem;
@@ -1126,7 +1077,7 @@ main small {
 /*page_title*/
 
 #page_title{
-	padding: 30px 0px 30px 0px;
+	padding: 0px 0px 30px 0px;
 	text-align: center;
 	
 }
@@ -1146,7 +1097,12 @@ main small {
 
 #background{
 	padding: 10px 50px 80px 50px;
+	
 
+}
+
+#background p{
+	text-align: justify;
 }
 
 #background .background_background h3{
@@ -1292,6 +1248,7 @@ main small {
 }
 
 #member1{
+	order: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1309,7 +1266,7 @@ main small {
 }
 
 #member1 .member1_pic{
-	background: url(../pictures/board_members/domtila2.jpg) no-repeat;
+	background: url(../pictures/board_members/domtila2.webp) no-repeat;
 	background-size: cover;
 	height: 400px;
 	width: 400px;
@@ -1320,10 +1277,13 @@ main small {
 
 
 #member2{
+	order: 4;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
+	width: 100vw;
+	background: #f4f4f4;
 }
 
 #member2 h3{
@@ -1337,7 +1297,7 @@ main small {
 }
 
 #member2 .member2_pic{
-	background: url(../pictures/board_members/moses.jpg) no-repeat;
+	background: url(../pictures/board_members/GraceAmurle.webp) no-repeat;
 	background-size: cover;
 	height: 400px;
 	width: 400px;
@@ -1348,10 +1308,13 @@ main small {
 
 
 #member3{
+	order: 2;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
+	width: 100vw;
+	background: #f4f4f4;
 }
 
 #member3 h3{
@@ -1365,7 +1328,7 @@ main small {
 }
 
 #member3 .member3_pic{
-	background: url(../pictures/board_members/MaryAnn.jpg) no-repeat;
+	background: url(../pictures/board_members/MaryAnn.webp) no-repeat;
 	background-size: cover;
 	height: 400px;
 	width: 400px;
@@ -1377,6 +1340,7 @@ main small {
 
 
 #member4{
+	order: 3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1394,7 +1358,7 @@ main small {
 }
 
 #member4 .member4_pic{
-	background: url(../pictures/board_members/Gitonga.jpg) no-repeat;
+	background: url(../pictures/board_members/Gitonga.webp) no-repeat;
 	background-size: cover;
 	height: 400px;
 	width: 400px;
@@ -1408,6 +1372,7 @@ main small {
 
 
 #member5{
+	order: 5;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1425,7 +1390,7 @@ main small {
 }
 
 #member5 .member5_pic{
-	background: url(../pictures/board_members/Jane.jpg) no-repeat;
+	background: url(../pictures/board_members/Jane.webp) no-repeat;
 	background-size: cover;
 	height: 400px;
 	width: 400px;
@@ -1439,10 +1404,13 @@ main small {
 
 
 #member6{
+	order: 6;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
+	width: 100vw;
+	background: #f4f4f4;
 }
 
 #member6 h3{
@@ -1456,7 +1424,7 @@ main small {
 }
 
 #member6 .member6_pic{
-	background: url(../pictures/board_members/Jonathan.jpg) no-repeat;
+	background: url(../pictures/board_members/Jonathan.webp) no-repeat;
 	background-size: cover;
 	height: 400px;
 	width: 400px;
@@ -1465,6 +1433,37 @@ main small {
 }
 
 
+
+
+
+
+
+#member7{
+	order: 7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#member7 h3{
+	font-size: 2rem;
+	font-family: Gotham-Book;
+}
+
+#member7 h4{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+}
+
+#member7 .member7_pic{
+	background: url(../pictures/board_members/none.jpg) no-repeat;
+	background-size: cover;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	margin: 10px;
+}
 
 
 
@@ -2002,30 +2001,43 @@ footer a{
 @media only screen and (max-width: 768px){
 
 	#homepage{
+		background: url(../pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE_full.webp) no-repeat;	
+		background-size: cover;
+		background-position: center;
 		flex-direction: column;
-		background-size: 100%;
-		margin-top: 10vh;
+		min-height: 100vh;
+	}
+
+	#homepage .homepage_left_content{
+		width: 100vw;
+	}
+
+	#homepage .homepage_left_content p{
+		color: white;
+		font-size: 0.9rem;
+	}
+
+	#homepage .homepage_right_content{
+			width: 100vw;
+			display: none;
 	}
 
 	#homepage h1{
-		margin: 30vh 0 10px 0;
+		margin: 20vh 0 10px 0;
 
 	}
 
 	.btn_learn_more{
-		margin-bottom: 20px;
+		width: 100px;
+		font-size: 1.2rem;
+		padding: 0;
+		height: 100px;
+		border-radius: 50%;
+		background: #FE08BD;
+		color: white;
+		margin: 4vh 0 0 0;
 	}
 
-	#homepage .IDG2019{
-		width: 80vw;
-		border-radius: 10px;
-		margin: 20px;
-		box-shadow: 0 0px 25px 2px rgba(1,1,1,0.2);
-	}
-
-	#homepage .IDG2019 .day_content{
-		flex-direction: column;
-	}
 
 	#org_intro .box{
 		width: 100%;
@@ -2214,7 +2226,7 @@ footer a{
 
 	#about_homepage{
 		padding: 0 0 0 0;
-		height: 25vh;
+		height: 15vh;
 	}
 
 	#about_homepage .about_home h1{
@@ -2320,7 +2332,14 @@ footer a{
 		font-size: 1rem;
 	}
 
+	#member7 .member7_pic{
+		width: 70vw;
+		height: 70vw;
+	}
 
+	#member7 h4{
+		font-size: 1rem;
+	}
 
 	#connect h6{
 		font-size: 10vw;
