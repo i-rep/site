@@ -1,53 +1,53 @@
 // sw.js
 
-var cacheName = 'WWW-EXAMPLE-COM-V1';
+var cacheName = 'irepfoundation_V1';
 
 var filesToCache = [
-    'index.html',
-    'blog/featured/abducted_rescued.html',
-    'blog/featured/where_is_belinda.html',
+    '/index.html',
+    '/blog/featured/abducted_rescued.html',
+    '/blog/featured/where_is_belinda.html',
 
-    'css/styling.css',
+    '/css/styling.css',
 
-    'pictures/board_members/domtila2.webp',
-    'pictures/board_members/Gitonga.webp',
-    'pictures/board_members/GraceAmurle.webp',
-    'pictures/board_members/Jane.webp',
-    'pictures/board_members/Jonathan.webp',
-    'pictures/board_members/MaryAnn.webp',
-    'pictures/board_members/none.jpg',
+    '/pictures/board_members/domtila2.webp',
+    '/pictures/board_members/Gitonga.webp',
+    '/pictures/board_members/GraceAmurle.webp',
+    '/pictures/board_members/Jane.webp',
+    '/pictures/board_members/Jonathan.webp',
+    '/pictures/board_members/MaryAnn.webp',
+    '/pictures/board_members/none.jpg',
 
-    'pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE.webp',    
-    'pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE_full.webp', 
-    'pictures/logo/i_rep_Logo.gif',    
-    'pictures/logo/i_rep_logo.png',
-    'pictures/logo/i_rep_logo_index.png',    
-    'pictures/logo/i_rep_logo_sm.png',
-    'pictures/logo/icon_256.png',
+    '/pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE.webp',    
+    '/pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE_full.webp', 
+    '/pictures/logo/i_rep_Logo.gif',    
+    '/pictures/logo/i_rep_logo.png',
+    '/pictures/logo/i_rep_logo_index.png',    
+    '/pictures/logo/i_rep_logo_sm.png',
+    '/pictures/logo/icon_256.png',
 
-    'pictures/misc/girl_1.webp',
-    'pictures/misc/girl_2.webp',
-    'pictures/misc/goals.webp',
-    'pictures/misc/mission.webp',
-    'pictures/misc/vision.webp',
+    '/pictures/misc/girl_1.webp',
+    '/pictures/misc/girl_2.webp',
+    '/pictures/misc/goals.webp',
+    '/pictures/misc/mission.webp',
+    '/pictures/misc/vision.webp',
 
-    'pictures/sponsors/actionaid_logo_bw.png',
-    'pictures/sponsors/global_media_camapaign_to_end_FGM_logo_bw.png',
-    'pictures/sponsors/the_ girl_generation_logo_bw.png',
-    'pictures/sponsors/Wallace_logo_bw.png',
-    'pictures/sponsors/West-Pokot-County_logo_bw.png',
-    'pictures/sponsors/world_vision_logo_bw.png',
+    '/pictures/sponsors/actionaid_logo_bw.png',
+    '/pictures/sponsors/global_media_camapaign_to_end_FGM_logo_bw.png',
+    '/pictures/sponsors/the_ girl_generation_logo_bw.png',
+    '/pictures/sponsors/Wallace_logo_bw.png',
+    '/pictures/sponsors/West-Pokot-County_logo_bw.png',
+    '/pictures/sponsors/world_vision_logo_bw.png',
 
 
 
-    'scripts/irepscripts.js',
+    '/scripts/irepscripts.js',
 
-    'about.html',
-    'privacy_policy.html',
-    'terms.html',
-    'join.html',
-    'volunteer.html',
-    'thank-you.html'
+    '/about.html',
+    '/privacy_policy.html',
+    '/terms.html',
+    '/join.html',
+    '/volunteer.html',
+    '/thank-you.html'
 
 ];
 
