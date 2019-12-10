@@ -1,6 +1,11 @@
 // sw.js
 
 var cacheName = 'irepfoundation_V1';
+const offlineUrl = 'offline_page.html';
+var cacheVersion = 1;
+var currentCache = {
+  offline: 'offline-cache' + cacheVersion
+};
 
 var filesToCache = [
     '/index.html',
@@ -47,7 +52,9 @@ var filesToCache = [
     '/terms.html',
     '/join.html',
     '/volunteer.html',
-    '/thank-you.html'
+    '/thank-you.html',
+
+    '/offline_page.html'
 
 ];
 
@@ -61,7 +68,10 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.ready.then(function (registration) {
             console.log('Service worker successfully registered on scope', registration.scope);
         });
-    });
+    }).catch(function(err) {
+        // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
 }
 
 
@@ -70,7 +80,7 @@ if ('serviceWorker' in navigator) {
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open(cacheName)
+        caches.open(currentCache.offline)
         .then(function(cache) {
             console.info('[sw.js] cached all files');
             return cache.addAll(filesToCache);
@@ -83,16 +93,21 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
-            if(response){
-                /*return response*/
-                Response('<h1>You are offline</h1>', {
-                status: 503,
-                statusText: 'Page will load once you are connected to the internet',
-                headers: new Headers({
-                  'Content-Type': 'text/html'
-                })
-            });
-                        }
+            
+
+            /*if(response){
+                return response
+                        }*/
+
+
+            if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+                    event.respondWith(
+                      fetch(event.request.url).catch(error => {
+                          // Return the offline page
+                          return caches.match(offlineUrl);
+                      })
+                );
+              }
 
 
             else{
