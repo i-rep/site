@@ -54,7 +54,8 @@ var filesToCache = [
     '/volunteer.html',
     '/thank-you.html',
 
-    '/offline_page.html'
+    offlineUrl
+
 
 ];
 
