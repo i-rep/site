@@ -1,7 +1,7 @@
 // sw.js
 
 var cacheName = 'irepfoundation_V1';
-const offlineUrl = 'offline_page.html';
+const offlineUrl = '/offline_page.html';
 var cacheVersion = 1;
 var currentCache = {
   offline: 'offline-cache' + cacheVersion
