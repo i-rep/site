@@ -131,13 +131,9 @@ self.addEventListener('fetch', function(event) {
                     // bad response
                     // response.type !== 'basic' means third party origin request
                     if(!response || response.status !== 200 || response.type !== 'basic') {
-                        //return response;  response stream consumed
-                            event.respondWith(
-                            fetch(event.request.url).catch(error => {
-                              // Return the offline page
-                              return caches.match(offlineUrl);
-                          })
-                    )}
+                        return response; // response stream consumed
+
+                    }
 
                     // clone response stream
                     // as stream once consumed, can not be used again
