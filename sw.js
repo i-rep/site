@@ -119,9 +119,9 @@ self.addEventListener('fetch', function(event) {
         caches.match(event.request)
         .then(function(response) {
             if(response){
-                return response
+                return response;
             }
-            else{
+/*            else{
                 // clone request stream
                 // as stream once consumed, can not be used again
                 var reqCopy = event.request.clone();
@@ -157,7 +157,9 @@ self.addEventListener('fetch', function(event) {
 
                     return response; // response stream consumed
                 })
-            }
+            }*/
+
+            
         })
     );
 
