@@ -55,7 +55,7 @@ var filesToCache = [
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-        navigator.serviceWorker.register('sw.js');
+        navigator.serviceWorker.register('/sw.js');
         
         //navigator.serviceWorker.ready always resolve
         navigator.serviceWorker.ready.then(function (registration) {
@@ -84,8 +84,17 @@ self.addEventListener('fetch', function(event) {
         caches.match(event.request)
         .then(function(response) {
             if(response){
-                return response
-            }
+                /*return response*/
+                Response('<h1>You are offline</h1>', {
+                status: 503,
+                statusText: 'Page will load once you are connected to the internet',
+                headers: new Headers({
+                  'Content-Type': 'text/html'
+                })
+            });
+                        }
+
+
             else{
                 // clone request stream
                 // as stream once consumed, can not be used again
