@@ -54,7 +54,7 @@ var filesToCache = [
     '/volunteer.html',
     '/thank-you.html',
 
-    offlineUrl
+    '/offline_page.html'
 
 
 ];
@@ -75,7 +75,7 @@ if ('serviceWorker' in navigator) {
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open(currentCache.offline)
+        caches.open(cacheName)
         .then(function(cache) {
             console.info('[sw.js] cached all files');
             return cache.addAll(filesToCache);
