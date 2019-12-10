@@ -99,9 +99,7 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches.match(event.request)
-        .then(function(response) {
+    
             
 
             /*if(response){
@@ -120,6 +118,8 @@ self.addEventListener('fetch', function(event) {
 
 
             else{
+                event.respondWith(caches.match(event.request)
+                .then(function(response) {
                 // clone request stream
                 // as stream once consumed, can not be used again
                 var reqCopy = event.request.clone();
@@ -150,10 +150,10 @@ self.addEventListener('fetch', function(event) {
 
                     return response; // response stream consumed
                 })
-            }
+            
         })
     );
-});
+};
 
 
 
