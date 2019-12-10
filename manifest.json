@@ -3,7 +3,7 @@
   "short_name": "I_Rep",
   "description": "Empowering women and girls to fully enjoy their human rights",
   "start_url": "/index.html",
-  "background_color": "#FE08BD",
+  "background_color": "#ffffff",
   "theme_color": "#FE08BD",
   "display" : "standalone",
   "icons": [{
