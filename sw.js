@@ -61,21 +61,6 @@ var filesToCache = [
 
 
 
-/*if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/sw.js');
-        
-        //navigator.serviceWorker.ready always resolve
-        navigator.serviceWorker.ready.then(function (registration) {
-            console.log('Service worker successfully registered on scope', registration.scope);
-        });
-    }).catch(function(err) {
-        // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-        });
-}
-*/
-
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
     // Registration was successful
@@ -105,6 +90,31 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
+    
+
+
+
+  // request.mode = navigate isn't supported in all browsers
+  // so include a check for Accept: text/html header.
+  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+        event.respondWith(
+          fetch(event.request.url).catch(error => {
+              // Return the offline page
+              return caches.match(offlineUrl);
+          })
+    );
+  }
+
+
+
+  else {
+      
+  
+
+
+
+
+
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
@@ -150,6 +160,8 @@ self.addEventListener('fetch', function(event) {
             }
         })
     );
+
+}
 });
 
 
