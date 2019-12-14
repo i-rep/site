@@ -124,13 +124,9 @@ self.addEventListener('fetch', event => {
       }());
 
       // Prefer the cached response, falling back to the fetch response.
-      return (await caches.match(normalizedUrl)) || fetchResponseP;
+      return (await caches.match(normalizedUrl)) || offlineUrl;
     }());
   }
-
-else {
-  return offlineUrl;
-}
 
 
 });
