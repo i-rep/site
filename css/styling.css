@@ -1247,6 +1247,20 @@ main small {
 
 }
 
+#li_img_logo{
+	width: 28px;
+	height: 28px;
+	background: url('../pictures/logo/icon_48.png') no-repeat;
+	background-size: contain;
+	/* background: red; */
+	margin: 0 5px 0 0;
+}
+
+#team_members li{
+	display: flex;
+	margin: 5px 0 0 0;
+}
+
 #member1{
 	order: 1;
 	display: flex;
@@ -1464,6 +1478,91 @@ main small {
 	border-radius: 50%;
 	margin: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* volunteers_about */
+
+#volunteers_about{
+	width: 90vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+#volunteers_about .volunteers_about_left_content{
+	width: 40vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#volunteers_about .volunteers_about_left_content .logo_and_title{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#volunteers_about .volunteers_about_left_content .logo_and_title h2{
+	font-size: 2rem;
+	font-family: Gotham-Thin;
+	text-align: center;
+	color: #800080;
+}
+
+#volunteers_about .volunteers_about_left_content .volunteers_logo{
+	background: url('../pictures/logo/volunteers_logo.webp') no-repeat;
+	background-size: cover;
+	height: 200px;
+	width: 200px;
+}
+
+#volunteers_about .volunteers_about_left_content i{
+	width: 10vw;
+	font-size: 3rem;
+	text-align: right;
+	color: #800080;
+}
+
+
+
+
+#volunteers_about .volunteers_about_right_content{
+	width: 50vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#volunteers_about .volunteers_about_right_content ul{
+	list-style-type: none;
+	padding: 3vw;
+	font-family: Arial;
+	color: #800080;
+}
+
+#volunteers_about .volunteers_about_right_content ul li{
+	padding: 10px;
+}
+
+
+
+
+
 
 
 
@@ -1999,6 +2098,10 @@ footer a{
 
 
 @media only screen and (max-width: 768px){
+	
+	header{
+		display: none;
+	}
 
 	#homepage{
 		background: url(../pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE_full.webp) no-repeat;	
@@ -2058,9 +2161,6 @@ footer a{
 		padding: 5px;
 	}
 
-	header{
-		display: none;
-	}
 
 	#nav-container{
 		display: inline-block;
@@ -2180,6 +2280,28 @@ footer a{
 		background: #EFEEEE;
 		padding: 10px;	
 	 	margin: 10px;
+	}
+
+	#volunteers_about{
+		flex-direction: column;
+		height: auto;
+	}
+
+	#volunteers_about .volunteers_about_left_content{
+		flex: 1;
+	}
+	
+
+	#volunteers_about .volunteers_about_left_content i{
+		display: none;
+	}
+
+
+	#volunteers_about .volunteers_about_right_content{
+		flex: 1;
+		padding: 0 0 8vh 0;
+		width: 100vw;
+		align-items: flex-start;
 	}
 
 	#join h2{
@@ -2348,6 +2470,7 @@ footer a{
 	#partners h3{
 		font-size: .8rem;
 	}
+
 
 	#contact_page .contact_boxes{
 		height: 78vh;
