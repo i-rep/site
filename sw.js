@@ -20,7 +20,7 @@ var filesToCache = [
     '/pictures/board_members/Jane.webp',
     '/pictures/board_members/Jonathan.webp',
     '/pictures/board_members/MaryAnn.webp',
-    '/pictures/board_members/none.jpg',
+    '/pictures/board_members/nicholas.webp',
 
     '/pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE.webp',    
     '/pictures/homepage_imgs/annie-spratt-cVEOh_JJmEE_full.webp', 
@@ -29,6 +29,8 @@ var filesToCache = [
     '/pictures/logo/i_rep_logo_index.png',    
     '/pictures/logo/i_rep_logo_sm.png',
     '/pictures/logo/icon_256.png',
+    '/pictures/logo/icon_48.png',
+    '/pictures/logo/volunteers_logo.webp',
 
     '/pictures/misc/girl_1.webp',
     '/pictures/misc/girl_2.webp',
@@ -125,6 +127,12 @@ self.addEventListener('fetch', event => {
       return (await caches.match(normalizedUrl)) || fetchResponseP;
     }());
   }
+
+else {
+  return offlineUrl;
+}
+
+
 });
 
 
