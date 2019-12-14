@@ -116,6 +116,8 @@ self.addEventListener('fetch', event => {
       const fetchResponseP = fetch(normalizedUrl);
       const fetchResponseCloneP = fetchResponseP.then(r => r.clone());
 
+
+
       // event.waitUntil() ensures that the service worker is kept alive
       // long enough to complete the cache update.
       event.waitUntil(async function() {
@@ -124,12 +126,22 @@ self.addEventListener('fetch', event => {
       }());
 
       // Prefer the cached response, falling back to the fetch response.
-      return (await caches.match(normalizedUrl)) || offlineUrl;
-    }());
+      return (await caches.match(normalizedUrl)) || fetchResponseP;
+    }()).then().catch(error => {
+          // Check if the user is offline first and is trying to navigate to a web page
+          if (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html')) {
+            // Return the offline page
+            return caches.match(offlineUrl);
+          }
+        });
   }
 
-
 });
+
+
+
+
+
 
 
 
