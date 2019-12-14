@@ -126,17 +126,12 @@ self.addEventListener('fetch', event => {
       }());
 
       // Prefer the cached response, falling back to the fetch response.
-      return (await caches.match(normalizedUrl)) || fetchResponseP;
-    }()).then().catch(error => {
-          // Check if the user is offline first and is trying to navigate to a web page
-          if (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html')) {
-            // Return the offline page
-            return caches.match(offlineUrl);
-          }
-        });
+      return (await caches.match(normalizedUrl)) || fetchResponseP || offlineUrl;
+    }());
   }
 
 });
+
 
 
 
