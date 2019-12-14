@@ -115,6 +115,7 @@ self.addEventListener('fetch', event => {
       // and a copy of the response that can be used in the cache.
       const fetchResponseP = fetch(normalizedUrl);
       const fetchResponseCloneP = fetchResponseP.then(r => r.clone());
+      const offPage = fetch(offlineUrl);
 
 
 
@@ -126,7 +127,7 @@ self.addEventListener('fetch', event => {
       }());
 
       // Prefer the cached response, falling back to the fetch response.
-      return (await caches.match(normalizedUrl)) || fetchResponseP || offlineUrl;
+      return (await caches.match(normalizedUrl)) || fetchResponseP || offPage;
     }());
   }
 
