@@ -1,0 +1,22 @@
+#xmas{
+	height: 31.3vw;
+	background: url('../pictures/misc/xmas.webp') no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px){
+
+	#xmas{
+
+	}
+
+}
